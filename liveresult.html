@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Number Results</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #1e3c72;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .update-time {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        @media (max-width: 600px) {
+            th, td { padding: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Live Number Results</h1>
+        <p>रियल टाइम अपडेट्स</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <div class="update-time" id="updateTime">
+                अंतिम अपडेट: <span id="time">लोड हो रहा है...</span>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>शहर</th>
+                        <th>मॉर्निंग</th>
+                        <th>इवनिंग</th>
+                        <th>समय</th>
+                        <th>व्हाट्सएप</th>
+                    </tr>
+                </thead>
+                <tbody id="resultsBody">
+                    <!-- डेटा यहाँ लोड होगा -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // रिजल्ट डेटा (आप इसे बदल सकते हैं)
+        const results = [
+            { city: "फरीदाबाद", morning: "240", evening: "580", time: "11:30 AM" },
+            { city: "गाजियाबाद", morning: "120", evening: "350", time: "12:30 PM" },
+            { city: "गली", morning: "380", evening: "190", time: "5:15 PM" },
+            { city: "देसावर", morning: "450", evening: "210", time: "6:45 PM" }
+        ];
+
+        // पेज लोड होने पर
+        window.onload = function() {
+            loadResults();
+            setInterval(loadResults, 300000); // हर 5 मिनट में अपडेट
+        };
+
+        // रिजल्ट लोड करें
+        function loadResults() {
+            let html = '';
+            results.forEach(item => {
+                html += `
+                    <tr>
+                        <td>${item.city}</td>
+                        <td>${item.morning}</td>
+                        <td>${item.evening}</td>
+                        <td>${item.time}</td>
+                        <td>
+                            <button class="whatsapp-btn" 
+                                    onclick="sendWhatsApp('${item.city} का रिजल्ट चाहिए')">
+                                मैसेज करें
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            });
+            document.getElementById('resultsBody').innerHTML = html;
+            
+            // अपडेट समय सेट करें
+            const now = new Date();
+            document.getElementById('time').textContent = 
+                `${now.toLocaleTimeString()} (${now.toLocaleDateString()})`;
+        }
+
+        // व्हाट्सएप मैसेज भेजें
+        function sendWhatsApp(message) {
+            const phone = "919876543210"; // यहाँ अपना WhatsApp नंबर डालें (country code के बिना)
+            window.open(`https://wa.me/91${phone}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+    </script>
+</body>
+</html>

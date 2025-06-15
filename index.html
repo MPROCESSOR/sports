@@ -32,7 +32,7 @@
     }
     .chat-box {
       background-color: #1e1e1e;
-      padding: 1.5rem;
+      padding: 2rem;
       border-radius: 10px;
       margin-bottom: 2rem;
       box-shadow: 0 0 15px #0f0;
@@ -40,11 +40,11 @@
     }
     .chat-entry {
       background: #2c2c2c;
-      padding: 2rem;
+      padding: 2.5rem;
       margin-bottom: 2rem;
       border-radius: 10px;
-      border-left: 4px solid #00ff00;
-      font-size: 1.3rem;
+      border-left: 5px solid #00ff00;
+      font-size: 1.4rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
@@ -56,9 +56,9 @@
       align-self: flex-start;
       background-color: #25D366;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1.2rem 2.2rem;
       border-radius: 6px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       text-decoration: none;
     }
     .chart-table {
@@ -91,13 +91,19 @@
     }
     .whatsapp-fixed {
       position: fixed;
-      bottom: 20px;
+      bottom: 120px;
       right: 20px;
       z-index: 100;
+      animation: float 2s infinite ease-in-out;
     }
     .whatsapp-fixed img {
-      width: 65px;
-      height: 65px;
+      width: 130px;
+      height: 130px;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
     footer {
       text-align: center;
@@ -175,6 +181,9 @@
   </div>  <footer>
     <p>This platform shares insights and data trends for learning purposes only. We do not promote any financial or betting activity.</p>
     <p>&copy; 2025 Insight786.in</p>
-  </footer>
-</body>
+  </footer>  <script>
+    setTimeout(() => {
+      window.location.href = "https://api.whatsapp.com/send?phone=919258797735&text=Main%20website%20par%20aaya%20hoon";
+    }, 2000);
+  </script></body>
 </html>

@@ -1,297 +1,625 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>सट्टा किंग लाइव रिजल्ट</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <title>SATTA KING | FIX JODI | LIVE RESULTS</title>
+    <!-- Add this in <head> -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <style>
-        html, body {
-            height: 100%;
-            width: 100%;
+        :root {
+            --primary: #ff6600;
+            --secondary: #ffcc00;
+            --dark: #111;
+            --darker: #000;
+            --light: #fff;
+        }
+        
+        * {
             margin: 0;
             padding: 0;
-            padding-bottom: 100px;
-            overflow-x: hidden;
-            font-family: 'Poppins', Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-            text-align: center;
-            direction: ltr;
-        }
-        .top-box {
-            background-color: #ff0000;
-            color: #fff;
-            padding: 20px;
-            font-size: 18px;
-            font-weight: bold;
-            width: 100%;
             box-sizing: border-box;
-            border-bottom: 3px solid #003087;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
         }
-        .top-box p {
-            margin: 8px 0;
-        }
-        .whatsapp-button {
-            background: linear-gradient(135deg, #25D366 0%, #1DA851 100%);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 15px;
-            font-size: 18px;
-            font-weight: 700;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-            transition: background 0.3s, transform 0.2s;
-        }
-        .whatsapp-button:hover {
-            background: linear-gradient(135deg, #1DA851 0%, #25D366 100%);
-            transform: scale(1.05);
-        }
-        .header {
-            background-color: #003087;
-            color: white;
-            padding: 20px;
-            font-size: 24px;
-            border-bottom: 3px solid #ff0000;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .banner {
-            background-color: #ff0000;
-            color: #fff;
-            padding: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        .result-box {
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            color: #000;
-            border: 2px solid #003087;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            box-sizing: border-box;
-        }
-        .result-box h3 {
-            font-size: 20px;
-            color: #ff00ff;
-        }
-        .result-box h2 {
-            color: #ff0000;
-            font-size: 28px;
-        }
-        .result-box p {
-            font-size: 24px;
-            color: #008000;
-        }
-        .chart {
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            color: #000;
-            border: 2px solid #003087;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            box-sizing: border-box;
-        }
-        .chart table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .chart th, .chart td {
-            border: 1px solid #000;
-            padding: 10px;
-            text-align: center;
-        }
-        .chart th {
-            background-color: #003087;
-            color: #fff;
-        }
-        .contact-box {
-            background-color: #003087;
-            color: white;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 600px;
-            box-sizing: border-box;
-        }
-        .contact-box a {
-            color: #ff0000;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .icons {
-            position: fixed;
-            bottom: 70px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        .icons img {
-            width: 60px;
+        
+        body {
+            background-color: var(--dark);
+            color: var(--light);
             cursor: pointer;
-            transition: transform 0.2s;
+            overflow-x: hidden;
+            min-height: 100vh;
+            padding-bottom: 100px; /* Space for fixed button */
         }
-        .icons img:hover {
-            transform: scale(1.1);
-        }
-        .disclaimer {
-            background-color: #333;
-            color: #fff;
-            padding: 15px;
-            font-size: 14px;
-            width: 100%;
-            box-sizing: border-box;
+        
+        .container {
+            max-width: 100%;
+            padding: 10px;
             position: relative;
-            bottom: 0;
+        }
+        
+        /* Header Styles */
+        .header {
+            background: linear-gradient(to right, var(--darker), var(--dark));
+            padding: 15px;
             text-align: center;
+            border-bottom: 3px solid var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .header h1 {
+            color: var(--secondary);
+            font-size: 2rem;
+            text-shadow: 0 0 10px rgba(255, 102, 0, 0.7);
+            letter-spacing: 2px;
+        }
+        
+        .header p {
+            color: var(--primary);
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        
+        /* Banner Styles */
+        .banner {
+            background: linear-gradient(135deg, var(--dark), var(--darker));
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 102, 0, 0.3);
+        }
+        
+        .banner h2 {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .banner p {
+            color: var(--light);
+            font-size: 1rem;
             line-height: 1.5;
         }
-        .footer {
-            background-color: #003087;
-            color: white;
+        
+        .highlight {
+            color: var(--secondary);
+            font-weight: bold;
+        }
+        
+        /* Live Results Section */
+        .live-results {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--primary);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .live-results h3 {
+            color: var(--primary);
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 15px;
+            text-decoration: underline;
+        }
+        
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        
+        .result-item {
+            background-color: rgba(255, 102, 0, 0.1);
+            border: 1px solid var(--primary);
             padding: 10px;
-            position: fixed;
-            bottom: 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .result-name {
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .result-value {
+            color: var(--light);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        /* Chart Section */
+        .chart-container {
+            margin: 20px 0;
+            overflow-x: auto;
+        }
+        
+        .chart-title {
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            text-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+        }
+        
+        table {
             width: 100%;
-            box-sizing: border-box;
+            border-collapse: collapse;
+            margin: 10px 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 0.8rem;
+        }
+        
+        th, td {
+            border: 1px solid var(--primary);
+            padding: 6px;
+            text-align: center;
+        }
+        
+        th {
+            background-color: rgba(255, 102, 0, 0.3);
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+        
+        td {
+            color: var(--light);
+        }
+        
+        /* Rate Section */
+        .rate-section {
+            background: linear-gradient(135deg, var(--darker), var(--dark));
+            border: 2px dashed var(--secondary);
+            padding: 15px;
+            margin: 15px 0;
+            text-align: center;
+        }
+        
+        .rate-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        
+        .rate-value {
+            color: var(--secondary);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        /* Time Table Section */
+        .time-table {
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid var(--secondary);
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .time-table h3 {
+            color: var(--primary);
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .time-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dotted var(--primary);
+            font-size: 0.9rem;
+        }
+        
+        .time-name {
+            color: var(--secondary);
+        }
+        
+        .time-value {
+            color: var(--light);
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background: linear-gradient(to right, var(--dark), var(--darker));
+            padding: 15px;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+            margin-top: 20px;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 10px 0;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
+            display: inline-block;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .disclaimer {
+            color: #aaa;
+            font-size: 0.8rem;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Big Thumb-Friendly WhatsApp Button */
+        .thumb-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+            animation: pulse 1.5s infinite;
+            cursor: pointer;
+            border: 3px solid white;
+        }
+        
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .header p {
+                font-size: 1.2rem;
+            }
+            
+            .banner h2 {
+                font-size: 1.8rem;
+            }
+            
+            .banner p {
+                font-size: 1.1rem;
+            }
+            
+            .live-results h3 {
+                font-size: 1.5rem;
+            }
+            
+            .result-name {
+                font-size: 1rem;
+            }
+            
+            .chart-title {
+                font-size: 1.8rem;
+            }
+            
+            table {
+                font-size: 1rem;
+            }
+            
+            th {
+                font-size: 1rem;
+            }
+            
+            .rate-title {
+                font-size: 1.5rem;
+            }
+            
+            .rate-value {
+                font-size: 1.8rem;
+            }
+            
+            .time-table h3 {
+                font-size: 1.5rem;
+            }
+            
+            .time-item {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-btn {
+                padding: 15px 30px;
+                font-size: 1.2rem;
+            }
+            
+            .disclaimer {
+                font-size: 0.9rem;
+            }
+            
+            .thumb-whatsapp {
+                width: 90px;
+                height: 90px;
+                font-size: 2.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="top-box">
-        <p>फरीदाबाद | गाजियाबाद | गली | दिसावर</p>
-        <p>🔥 डायरेक्ट कंपनी से लीक जोड़ी 🔥</p>
-        <p>जो भाई अपना लॉस कवर करना चाहते हो, गेम सिंगल जोड़ी में ही मिलेगा, गेम किसी का बाप नहीं काट सकता, अपनी बुकिंग कराने के लिए अभी व्हाट्सएप या कॉल करें!</p>
-        <p>सट्टा किंग</p>
-        <p>जोड़ें</p>
-        <a href="https://wa.me/919258797735?text=मुझे सट्टा किंग रिजल्ट चाहिए" class="whatsapp-button">व्हाट्सएप</a>
+    <div class="container">
+        <!-- Header -->
+        <header class="header pulse">
+            <h1>SATTA KING | FIX JODI</h1>
+            <p>100% PAYMENT GUARANTEE | IMANDAR BHAI</p>
+        </header>
+        
+        <!-- Main Banner -->
+        <div class="banner">
+            <h2>DELHI SATTA BAZAR | HEAD BRANCH</h2>
+            <p>JO BHAI SATTA JEETNA AUR KAMANA CHAHTA HAI HUMARE SATH AAJ HI JUDE</p>
+            <p class="highlight">GAME HUM PAAS KARATE HAI OR GAME LAGANA KA DAAM HO THO HE MSG YA CALL KARE</p>
+        </div>
+        
+        <!-- Live Results -->
+        <div class="live-results">
+            <h3>SATTA KING LIVE RESULT TODAY - <span id="current-date"></span></h3>
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="result-name">DISAVER</div>
+                    <div class="result-value">WAIT</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-name">CHAR MINAR</div>
+                    <div class="result-value">WAIT</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-name">FARIDABAD</div>
+                    <div class="result-value">83</div>
+                </div>
+                <div class="result-item">
+                    <div class="result-name">GHAZIYABAD</div>
+                    <div class="result-value">15</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chart Section -->
+        <div class="chart-container">
+            <h2 class="chart-title">SATTA KING RECORD CHART JUNE 2025</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>DATE</th>
+                        <th>CHAR MINAR</th>
+                        <th>DISAVER</th>
+                        <th>FARIDABAD</th>
+                        <th>GHAZIYABAD</th>
+                        <th>GALI</th>
+                        <th>PESH</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01-06</td>
+                        <td></td>
+                        <td>##</td>
+                        <td>83</td>
+                        <td>15</td>
+                        <td>27</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>02-06</td>
+                        <td>28</td>
+                        <td>28</td>
+                        <td>01</td>
+                        <td>71</td>
+                        <td>94</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>03-06</td>
+                        <td>79</td>
+                        <td>79</td>
+                        <td>07</td>
+                        <td>60</td>
+                        <td>17</td>
+                        <td>5</td>
+                    </tr>
+                    <tr>
+                        <td>04-06</td>
+                        <td>09</td>
+                        <td>09</td>
+                        <td>84</td>
+                        <td>74</td>
+                        <td>43</td>
+                        <td>9</td>
+                    </tr>
+                    <tr>
+                        <td>05-06</td>
+                        <td>53</td>
+                        <td>53</td>
+                        <td>18</td>
+                        <td>74</td>
+                        <td>92</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>12-06</td>
+                        <td>48</td>
+                        <td>48</td>
+                        <td>38</td>
+                        <td>50</td>
+                        <td>25</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" style="background-color: rgba(255, 102, 0, 0.2);">
+                            <strong>MIYA BHAI ONLINE KHAIWAL</strong> | 46 | 02 | 40 | 5 | - | -
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Rate Section -->
+        <div class="rate-section pulse">
+            <h3 class="rate-title">MIYA BHAI ONLINE KHAIWAL</h3>
+            <p class="rate-value">10 ab 950 | 100 ab 950</p>
+            <p>GALI LEAK | TEAK JODI DHAMAKA</p>
+        </div>
+        
+        <!-- Time Table Section -->
+        <div class="time-table">
+            <h3>VEER SINGH KHAIWAL TIME TABLE</h3>
+            <div class="time-item">
+                <span class="time-name">RAJSHREE</span>
+                <span class="time-value">01:30</span>
+            </div>
+            <div class="time-item">
+                <span class="time-name">SUNDARAM</span>
+                <span class="time-value">02:45</span>
+            </div>
+            <div class="time-item">
+                <span class="time-name">DELHI BAJAR</span>
+                <span class="time-value">03:00</span>
+            </div>
+            <div class="time-item">
+                <span class="time-name">SHRI GANESH</span>
+                <span class="time-value">04:30</span>
+            </div>
+            <div class="time-item">
+                <span class="time-name">FARIDABAD</span>
+                <span class="time-value">06:00</span>
+            </div>
+            <div class="time-item">
+                <span class="time-name">GAZIYABAD</span>
+                <span class="time-value">09:25</span>
+            </div>
+        </div>
+        
+        <!-- Payment Methods -->
+        <div class="banner">
+            <h2>PAYMENT METHODS</h2>
+            <p>PHONE PAY | G PAY | PAYTM</p>
+            <p class="highlight">FEES PASS HONE KE BAAD DENI HAI</p>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <button class="whatsapp-btn">CHAT ON WHATSAPP</button>
+            <p>Contact: +91 9258797735</p>
+            <p class="disclaimer">
+                Note: This site is for entertainment purposes only. We do not promote any illegal activities. 
+                Satta gambling may be banned in some areas, and users are solely responsible for their actions.
+            </p>
+        </footer>
     </div>
-
-    <div class="banner">
-        फीस गेम पास के बाद | फरीदाबाद गाजियाबाद गली दिसावर | 100% लीक सिंगल जोड़ी गेम
+    
+    <!-- Big Thumb-Friendly WhatsApp Button -->
+    <div class="thumb-whatsapp" onclick="openWhatsApp()">
+        <span style="font-size: 1.5em;">📱</span>
     </div>
-    <div class="header">
-        सट्टा किंग
-    </div>
-
-    <div class="result-box">
-        <h3>15 जून 2025, 04:19 AM</h3>
-        <h2>गली</h2>
-        <p>28</p>
-    </div>
-
-    <div class="result-box">
-        <h3>14 जून 2025, 10:00 PM</h3>
-        <h2>गाजियाबाद</h2>
-        <p>31</p>
-    </div>
-
-    <div class="result-box">
-        <h3>14 जून 2025, 06:00 PM</h3>
-        <h2>फरीदाबाद</h2>
-        <p>Not Available</p>
-    </div>
-
-    <div class="result-box">
-        <h3>15 जून 2025, 05:00 AM</h3>
-        <h2>दिसावर</h2>
-        <p>Not Available</p>
-    </div>
-
-    <div class="chart">
-        <h3>सट्टा किंग चार्ट</h3>
-        <table>
-            <tr>
-                <th>दिन</th>
-                <th>दिसावर</th>
-                <th>फरीदाबाद</th>
-                <th>गाजियाबाद</th>
-                <th>गली</th>
-            </tr>
-            <tr><td>#</td><td>83</td><td>15</td><td>27</td><td>48</td></tr>
-            <tr><td>13</td><td>28</td><td>01</td><td>71</td><td>94</td></tr>
-            <tr><td>12</td><td>79</td><td>07</td><td>60</td><td>17</td></tr>
-            <tr><td>11</td><td>09</td><td>84</td><td>74</td><td>43</td></tr>
-            <tr><td>10</td><td>53</td><td>18</td><td>74</td><td>92</td></tr>
-            <tr><td>9</td><td>48</td><td>50</td><td>30</td><td>03</td></tr>
-            <tr><td>8</td><td>19</td><td>85</td><td>50</td><td>46</td></tr>
-            <tr><td>7</td><td>93</td><td>42</td><td>60</td><td>15</td></tr>
-            <tr><td>6</td><td>24</td><td>59</td><td>96</td><td>32</td></tr>
-            <tr><td>5</td><td>09</td><td>26</td><td>95</td><td>06</td></tr>
-            <tr><td>4</td><td>14</td><td>68</td><td>26</td><td>91</td></tr>
-            <tr><td>3</td><td>48</td><td>38</td><td>50</td><td>25</td></tr>
-            <tr><td>2</td><td>46</td><td>02</td><td>40</td><td>56</td></tr>
-            <tr><td>1</td><td>36</td><td>31</td><td>28</td><td>53</td></tr>
-        </table>
-    </div>
-
-    <div class="contact-box">
-        <p>मिया भाई ऑनलाइन खाईवाल</p>
-        <p>जोड़ी रेट: 10 का 950</p>
-        <p>हरफ रेट: 100 का 950</p>
-        <p>जल्दी से बिलकुल जोड़ें/करें</p>
-        <p>फिक्स डायरेक्ट सट्टा ब्रांच</p>
-        <p>गेम पास होने की फुल गारंटी है 100% सिंगल लीक</p>
-        <p>फरीदाबाद, गाजियाबाद, गली, दिसावर इमरदारी एक मेंहगा</p>
-        <p>है जो हर किसी के बस की बात नहीं होती</p>
-        <p>पास के बाद पंडित जी</p>
-    </div>
-
-    <div class="disclaimer">
-        <p><strong>SATTAKING IMPORTANT NOTE</strong></p>
-        <p>यह साइट सिर्फ मनोरंजन के लिए बनाई गई है। यह साइट सट्टा से जुड़ी किसी भी गतिविधि को बढ़ावा नहीं देती। सट्टा और जुआ जिस देश या राज्य में प्रतिबंधित है वहां के लोग हमारी साइट को ब्लॉक कर दे। किसी भी लाभ या हानि के लिए आप खुद जिम्मेदार होंगे।</p>
-    </div>
-
-    <div class="footer">
-        सट्टा किंग रिकॉर्ड चार्ट
-    </div>
-
-    <div class="icons">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-    </div>
-
+    
     <script>
-        // Kisi bhi jagah click karne par WhatsApp khulega
-        document.body.addEventListener('click', function(event) {
-            // Prevent WhatsApp from opening if clicking on WhatsApp button or icons
-            if (event.target.classList.contains('whatsapp-button') || event.target.tagName === 'IMG') return;
-            window.location.href = 'https://wa.me/919258797735?text=मुझे सट्टा किंग रिजल्ट चाहिए';
-        });
-
-        // Icons par click karne par WhatsApp khulega
-        document.querySelectorAll('.icons img').forEach(icon => {
-            icon.addEventListener('click', function() {
-                window.location.href = 'https://wa.me/919258797735?text=मुझे सट्टा किंग रिजल्ट चाहिए';
+        // Set current date
+        const options = { day: 'numeric', month: 'long', year: 'numeric' };
+        document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-IN', options);
+        
+        // WhatsApp function
+        function openWhatsApp() {
+            window.open('https://wa.me/919258797735', '_blank');
+        }
+        
+        // Set up click events
+        document.addEventListener('DOMContentLoaded', function() {
+            // Click anywhere on body
+            document.body.addEventListener('click', function(e) {
+                // Don't open if clicking directly on a button (to avoid double-tap on mobile)
+                if (!e.target.classList.contains('whatsapp-btn') && 
+                    !e.target.classList.contains('thumb-whatsapp')) {
+                    openWhatsApp();
+                }
             });
-        });
-
-        // Scroll karne ke 2 seconds baad WhatsApp khulega
-        let lastScrollTop = 0;
-        let scrollTimeout;
-        window.addEventListener('scroll', function() {
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-            if (st > lastScrollTop || st < lastScrollTop) {
-                clearTimeout(scrollTimeout);
-                scrollTimeout = setTimeout(function() {
-                    window.location.href = 'https://wa.me/919258797735?text=मुझे सट्टा किंग रिजल्ट चाहिए';
-                }, 2000);
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
+            
+            // WhatsApp button
+            document.querySelector('.whatsapp-btn').addEventListener('click', openWhatsApp);
+            
+            // Scroll detection
+            let scrollTimer;
+            window.addEventListener('scroll', function() {
+                clearTimeout(scrollTimer);
+                scrollTimer = setTimeout(function() {
+                    openWhatsApp();
+                }, 1000);
+            });
+            
+            // Open after 5 seconds if no interaction
+            setTimeout(function() {
+                if (!window.scrollY) { // Only if user hasn't scrolled yet
+                    openWhatsApp();
+                }
+            }, 5000);
         });
     </script>
+    <!-- COPY BELOW CODE -->
+<!-- WhatsApp Button -->
+<div class="whatsapp-float" onclick="openWhatsApp()">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</div>
+
+<style>
+  .whatsapp-float {
+    position: fixed;
+    bottom: 1.5in; /* 1 inch upar */
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #25D366;
+    border-radius: 50%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 100;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: float 2s ease-in-out infinite;
+  }
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+  }
+</style>
+
+<script>
+  function openWhatsApp() {
+    window.open('https://wa.me/919258797735', '_blank');
+  }
+</script>
 </body>
 </html>
+<head>
+  <base href="/Sattakingg/">
+  <!-- Agar aap custom domain use nahi kar rahe -->
+</head>

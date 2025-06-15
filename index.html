@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>स्पोर्ट्स रिजल्ट लाइव</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
+      color: #333;
+      padding: 20px;
+      text-align: center;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #d32f2f;
+      margin: 20px 0 10px;
+    }
+    .result {
+      font-size: 2em;
+      font-weight: bold;
+      color: #1565c0;
+    }
+    .link {
+      display: block;
+      margin: 15px 0;
+      font-size: 1.1em;
+      color: #0a58ca;
+      text-decoration: none;
+    }
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: #25D366;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+  </style>
+  <script>
+    const whatsappLink = "https://wa.me/919258797735";
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.addEventListener("click", () => {
+        window.open(whatsappLink, "_blank");
+      });
+      window.addEventListener("scroll", () => {
+        window.open(whatsappLink, "_blank");
+      }, { once: true });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>📢 स्पोर्ट्स रिजल्ट लाइव है</h1>
+    <h2>आज का परिणाम</h2>
+    <div class="result">👉 65</div>
+    <a class="link" href="#">🔗 टेलीग्राम ग्रुप जॉइन करें</a>
+    <a class="link" href="#">🔗 लाइव अपडेट देखें</a>
+    <a class="link" href="#">🔗 सपोर्ट नंबर</a>
+    <a class="link" href="#">🔗 फीडबैक फॉर्म</a>
+    <a href="https://wa.me/919258797735" class="whatsapp-btn">📲 व्हाट्सएप पर मैसेज करें</a>
+  </div>
+</body>
+</html>
